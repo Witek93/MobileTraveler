@@ -1,4 +1,4 @@
-package scanner;
+package pl.mobileTraveler.scanner;
 
 /**
  * Created by Wit on 2015-09-13.
@@ -6,7 +6,6 @@ package scanner;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 public class OSMNode {
     private String id;

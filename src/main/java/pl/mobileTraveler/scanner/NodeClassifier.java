@@ -1,4 +1,4 @@
-package scanner;
+package pl.mobileTraveler.scanner;
 
 /**
  * Created by Wit on 2015-09-13.

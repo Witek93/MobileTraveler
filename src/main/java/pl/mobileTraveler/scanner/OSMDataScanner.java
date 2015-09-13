@@ -1,4 +1,4 @@
-package scanner;
+package pl.mobileTraveler.scanner;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
