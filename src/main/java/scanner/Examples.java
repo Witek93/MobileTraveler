@@ -5,12 +5,12 @@ package scanner;
  */
 
 
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
-import javax.xml.parsers.ParserConfigurationException;
-
-import org.xml.sax.SAXException;
 
 public class Examples {
 
@@ -36,7 +36,7 @@ public class Examples {
     }
 
     /**
-     * Przyk≥ad, ktÛry przeszukuje dosyÊ duøy obszar (1km kw.) z placem zamkowym
+     * Przyk≈Çad, kt√≥ry przeszukuje dosyƒá du≈ºy obszar (1km kw.) z placem zamkowym
      * Wawelu jako punktem centralnym
      */
     private static void example_wawel_1km_range() throws IOException, ParserConfigurationException, SAXException {
@@ -55,14 +55,14 @@ public class Examples {
         printTags(50.061719, 19.938798, range, tag); // Bazylika Mariacka
         System.out.println("pomnik Mickiewicza:");
         printTags(50.061512, 19.937985, range, tag); // pomnik Mickiewicza
-        System.out.println("koúciÛ≥ åw. Wojciecha:");
-        printTags(50.060808, 19.937849, range, tag); // koúciÛ≥ åw. Wojciecha
-        System.out.println("Plac DominikaÒski/Grodzka:");
-        printTags(50.059099, 19.937892, range, tag); // Plac DominikaÒski/Grodzka
-        System.out.println("Plac BernardyÒski:");
-        printTags(50.054041, 19.938162, range, tag); // Plac BernardyÒski
-        System.out.println("wejúcie na Wawel:");
-        printTags(50.052780, 19.935271, range, tag); // wejúcie na Wawel
+        System.out.println("ko≈õci√≥≈Ç ≈öw. Wojciecha:");
+        printTags(50.060808, 19.937849, range, tag); // ko≈õci√≥≈Ç ≈öw. Wojciecha
+        System.out.println("Plac Dominika≈Ñski/Grodzka:");
+        printTags(50.059099, 19.937892, range, tag); // Plac Dominika≈Ñski/Grodzka
+        System.out.println("Plac Bernardy≈Ñski:");
+        printTags(50.054041, 19.938162, range, tag); // Plac Bernardy≈Ñski
+        System.out.println("wej≈õcie na Wawel:");
+        printTags(50.052780, 19.935271, range, tag); // wej≈õcie na Wawel
         System.out.println("Wawel: przy zamku:");
         printTags(50.054351, 19.935469, range, tag); // Wawel: przy zamku
         System.out.println("Wawel: plac zamkowy:");
