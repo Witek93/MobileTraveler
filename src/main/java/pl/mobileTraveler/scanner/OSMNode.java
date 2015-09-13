@@ -29,15 +29,16 @@ public class OSMNode {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder("\n");
+        StringBuilder stringBuilder = new StringBuilder("\n");
         for (Map.Entry<String, String> e : tags.entrySet()) {
-            sb.append('\t')
+            stringBuilder
+                    .append('\t')
                     .append(e.getKey())
                     .append(": ")
                     .append(e.getValue())
                     .append('\n');
         }
-        return this.id + " " + this.lat + " " + this.lon + sb.toString();
+        return this.id + " " + this.lat + " " + this.lon + stringBuilder.toString();
 
     }
 
