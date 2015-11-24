@@ -11,11 +11,11 @@ public class Server extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(SampleWebStaticApplication.class);
+        return application.sources(Server.class);
     }
 
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(SampleWebStaticApplication.class, args);
+        SpringApplication.run(Server.class, args);
     }
 
 }

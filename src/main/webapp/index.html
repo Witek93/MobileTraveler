@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="ServicesApp">
 <head>
     <title>Static</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css"
           href="webjars/bootstrap/3.0.3/css/bootstrap.min.css" />
+    <script src="webjars/angularjs/1.4.2/angular.js"></script>
+    <script src="get.js"></script>
 </head>
-<body>
+<body ng-controller="ServicesController">
 <script type="text/javascript"
         src="webjars/jquery/2.0.3/jquery.min.js"></script>
 <div id="navbar" class="navbar navbar-default" role="navigation">
@@ -17,22 +19,28 @@
                 class="icon-bar"></span>
         </button>
         <a class="navbar-brand"
-           href="https://github.com/spring-projects/spring-boot"> Spring Boot
+           href="/"> MobileTraveler
         </a>
     </div>
     <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-            <li><a href="./"> Home </a></li>
+            <li><a href="/"> Home </a></li>
         </ul>
     </div>
 </div>
 <div class="jumbotron">
-    <h1>Home</h1>
-    <p>Some static content</p>
-    <p>
-        <a class="btn btn-lg btn-primary" href="#navbar" role="button">Go &raquo;</a>
-    </p>
+    <form>
+        <p>Longitude: <input type="text" ng-init="long=19.907652" ng-model="long"></p>
+        <p>Latitude: <input type="text" ng-init="lati=50.068847" ng-model="lati"></p>
+        <p>Tag: <input type="text" ng-init="tag='amenity'" ng-model="tag"></p>
+        <input class="btn btn-lg btn-primary" type="submit" value="Submit" ng-click="getData(long,lati,tag)">
+    </form>
+
+    <div ng-repeat="(key, value) in services" style="margin-top:5px;margin-left:10px;padding:1px;">
+        <p>  {{key}} : {{value}}</p>
+    </div>
 </div>
+
 <script type="text/javascript"
         src="webjars/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 </body>

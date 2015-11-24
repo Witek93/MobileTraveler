@@ -1,9 +1,5 @@
 package pl.mobileTraveler.scanner;
 
-/**
- * Created by Wit on 2015-09-13.
- */
-
 
 import org.xml.sax.SAXException;
 
@@ -61,14 +57,23 @@ public class Examples {
         printTags(50.059099, 19.937892, range, tag); // Plac Dominikański/Grodzka
         System.out.println("Plac Bernardyński:");
         printTags(50.054041, 19.938162, range, tag); // Plac Bernardyński
-        System.out.println("wejście na Wawel:");
+        System.out.println("Wawel, wejście:");
         printTags(50.052780, 19.935271, range, tag); // wejście na Wawel
-        System.out.println("Wawel: przy zamku:");
+        System.out.println("Wawel, przy zamku:");
         printTags(50.054351, 19.935469, range, tag); // Wawel: przy zamku
-        System.out.println("Wawel: plac zamkowy:");
+        System.out.println("Wawel, plac zamkowy:");
         printTags(50.054488, 19.936639, range, tag); // Wawel: plac zamkowy
     }
 
+    /**
+     * @param lat
+     * @param lon
+     * @param range
+     * @param tag
+     * @throws IOException
+     * @throws ParserConfigurationException
+     * @throws SAXException
+     */
     private static void printTags(double lat, double lon, double range, String tag)
             throws IOException, ParserConfigurationException, SAXException {
         Map<String, Integer> values = NodeClassifier.getValuesForTag(
@@ -76,6 +81,12 @@ public class Examples {
         for (Map.Entry<String, Integer> e : values.entrySet()) {
             System.out.println("\t" + e.getKey() + ": " + e.getValue());
         }
+    }
+
+    public static Map<String, Integer> temp(double lat, double lon, String tag)
+            throws ParserConfigurationException, SAXException, IOException {
+        return NodeClassifier.getValuesForTag(
+                OSMDataScanner.getOSMNodesInRange(lat, lon, 0.003), tag);
     }
 
     /*
